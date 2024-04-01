@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 from crewai import Agent, Crew, Process, Task
 
 search_tool = SerperDevTool()
-max_iterations = 3
+max_iterations = 3 
 llm_model = ChatOpenAI(
                 model="crewai-mistral",
                 base_url="http://127.0.0.1:11434/v1",
@@ -74,7 +74,7 @@ write_task = Task(
 crew = Crew(
     agents=[researcher, writer],
     tasks=[research_task, write_task],
-    process=Process.sequential  # Optional: Sequential task execution is default
+    process=Process.sequential  
 )
 
 # Starting the task execution process with enhanced feedback
