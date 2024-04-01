@@ -1,10 +1,6 @@
 from crewai_tools import SerperDevTool
 from langchain_openai import ChatOpenAI
 
-import os
-os.environ["SERPER_API_KEY"] = "73220c1e3b367eb682cd38193aa6a7cc3af82a1a" # serper.dev API key
-os.environ["OPENAI_API_KEY"] = "NA"
-
 from crewai import Agent, Crew, Process, Task
 
 search_tool = SerperDevTool()
